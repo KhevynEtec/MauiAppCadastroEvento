@@ -12,77 +12,77 @@
         <Label Text="Cadastro de Evento"
                FontSize="50"
                TextColor="{StaticResource Primary}" />
+     
+                <Frame Padding="10" Margin="-5">
+                    <VerticalStackLayout>
+                        <Label Text="Nome do Evento: " HorizontalOptions="Start"/>
+                        <Entry x:Name="txt_NomeEvento" Placeholder="Ex: Evento BGS " />
 
-        <Frame Padding="10">
-            <VerticalStackLayout>
-                <Label Text="Nome do Evento: " HorizontalOptions="Start"/>
-                <Entry x:Name="txt_NomeEvento" Placeholder="Ex: Evento BGS " />
-
-            </VerticalStackLayout>
-        </Frame>
-
-        <Frame Padding="10">
-            <VerticalStackLayout>
-                <Grid RowDefinitions="Auto, Auto"
+                <Frame Padding="10">
+                    <VerticalStackLayout>
+                        <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
 
-                    <Label Grid.Row="0" Grid.Column="0"
+                            <Label Grid.Row="0" Grid.Column="0"
                            Text="Participantes:" HorizontalOptions="Start"/>
 
-                    <Label Grid.Row="0" Grid.Column="1"
+                            <Label Grid.Row="0" Grid.Column="1"
                            TextColor="{StaticResource Primary}"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_participantes}"/>
 
-                    <Stepper Grid.Row="0" Grid.Column="2"
+                            <Stepper Grid.Row="0" Grid.Column="2"
                              x:Name="stp_participantes"
                              Minimum="0"
                              Maximum="50"
                              Increment="1" />
-                </Grid>
+                        </Grid>
 
-                <Label Text="Local do Evento:" 
+                        <Label Text="Local do Evento:" 
                        HorizontalOptions="Start"/>
-                
-                <Entry x:Name="txt_LocalEvento" 
+
+                        <Entry x:Name="txt_LocalEvento" 
                        Placeholder="Ex: Av. Aricanduva, 5426 - Vila California, São Paulo - SP, 03490-000"/>
 
-                <Label Text="Custo por Participantes:" 
+                        <Label Text="Custo por Participantes:" 
                        HorizontalOptions="Start"/>
-                
-                <Entry x:Name="CustoEntry" 
+
+                        <Entry x:Name="CustoEntry" 
                        Placeholder="R$" Keyboard="Numeric" />
 
 
 
-            </VerticalStackLayout>
-        </Frame>
+                    </VerticalStackLayout>
+                </Frame>
 
-        <Frame Padding="10"
+                <Frame Padding="10"
                Margin="10">
-            
-            <VerticalStackLayout Spacing="10">
 
-                <Label Text="Data Evento"
-                               TextTransform="Uppercase"
-                               FontSize="Subtitle"
-                               TextColor="{StaticResource Primary}"/>
+                    <VerticalStackLayout Spacing="10">
 
-                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Data de início:" />
-                    <DatePicker x:Name="dtpck_datainicio"
+                        <Label Text="Data Evento"
+                       TextTransform="Uppercase"
+                       FontSize="Subtitle"
+                       TextColor="{StaticResource Primary}"/>
+
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Data de início:" />
+                            <DatePicker x:Name="dtpck_datainicio"
                                 DateSelected="dtpck_datainicio_DateSelected"
                                 Format="dd/MM/yyyy" />
-                </HorizontalStackLayout>
+                        </HorizontalStackLayout>
 
-                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Data de término:" />
-                    <DatePicker x:Name="dtpck_datatermino"
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Data de término:" />
+                            <DatePicker x:Name="dtpck_datatermino"
                                 Format="dd/MM/yyyy" />
-                    
-                </HorizontalStackLayout>
+
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+
             </VerticalStackLayout>
-        </Frame>
+                </Frame>
 
         <Button Text="Avançar" Clicked="Button_Clicked" />
 

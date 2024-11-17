@@ -52,7 +52,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <Button Text="Voltar" Clicked="Button_Clicked" />
+            <Button Text="Voltar" Clicked="Button_Clicked" TextColor="{StaticResource Primary}"/>
 
         </VerticalStackLayout>
     </ScrollView>
